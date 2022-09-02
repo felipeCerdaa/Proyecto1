@@ -7,24 +7,25 @@
 <h1>soy la pagina test</h1>
 
 
-<div class="card">
+<div class="card col-5">
 	<div class="card-header">
 		<h3>Calculadora</h3>
 	</div>
+
 	<div class="card-body">
-		<form>
+		<form method="post">
 			<div class="form-group"> 
 			<label>Numero 1</label>
-			<input class="form-control"/>
+			<input asp-for="numero1" type="number" class="form-control"/>
 		</div>
 		
 
 		<div class="form-group">
 			<label>Numero 2</label>
-			<input class="form-control" />
+			<input asp-for="numero2" type="number" class="form-control" />
 		</div>
 
-		<button class="btn btn-primary">Calcular</button>
+		<button type="submit" class="btn btn-primary mt-5">Calcular</button>
 		</form>
 	</div>
 
