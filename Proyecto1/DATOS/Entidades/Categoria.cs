@@ -1,4 +1,4 @@
-﻿namespace Proyecto1.NEGOCIO
+﻿namespace Proyecto1.DATOS
 {
 	public class Categoria
 	{
