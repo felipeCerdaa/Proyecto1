@@ -4,9 +4,9 @@ namespace Proyecto1.NEGOCIO
 {
     public class CategoriaNegocio
     {
-        public List<CategorioDTO> ObtenerCategoria()
+        public List<CategoriaDTO> ObtenerCategoria()
         {
-            var lista = new List<CategorioDTO>();
+            var lista = new List<CategoriaDTO>();
 
             return listaCategoriasDTO;
         }
