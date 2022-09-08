@@ -4,8 +4,9 @@
 }
 
 <div class="card">
-	<div class="card-header bg-primary text-white">
-		<h3>Listado Categorias</h3>
+	<div class="card-header bg-primary text-white d-flex justify-content-between">
+		<h4>Listado Categorias</h4>
+		<button class="btn btn-success"><i class="bi bi-person-plus-fill"></i> Nueva Categoria</button>
 	</div>
 	<div class="card-body">
 		<table class="table table-striped">
@@ -24,8 +25,8 @@
 					<td>@categoria.Id</td>
 					<td>@categoria.Nombre</td>
 					<td>
-						<button class="btn btn-warning">Editar</button>
-						<button class="btn btn-danger">Borrar</button>
+							<button class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</button>
+							<button class="btn btn-danger"><i class="bi bi-trash"></i> Borrar</button>
 					</td>
 				</tr>
 				}
