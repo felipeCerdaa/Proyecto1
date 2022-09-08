@@ -17,30 +17,18 @@
 				</tr>
 			</thead>
 			<tbody>
+				@foreach(var categoria in Model.Categorias)
+				{
+
 				<tr>
-					<td>1</td>
-					<td>Categoria 1</td>
+					<td>@categoria.Id</td>
+					<td>@categoria.Nombre</td>
 					<td>
 						<button class="btn btn-warning">Editar</button>
 						<button class="btn btn-danger">Borrar</button>
 					</td>
 				</tr>
-				<tr>
-					<td>2</td>
-					<td>Categoria 2</td>
-					<td>
-						<button class="btn btn-warning">Editar</button>
-						<button class="btn btn-danger">Borrar</button>
-					</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Categoria 3</td>
-					<td>
-						<button class="btn btn-warning">Editar</button>
-						<button class="btn btn-danger">Borrar</button>
-					</td>
-				</tr>
+				}
 			</tbody>
 		</table>
 	</div>

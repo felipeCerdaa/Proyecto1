@@ -3,11 +3,11 @@ using System.Data.SqlClient;
 
 namespace Proyecto1.DATOS.Repositorios
 {
-    public class categoriaRepositorio
+    public class CategoriaRepositorio : ICategoriaRepositorio
     {
         private readonly IConfiguration _configuration;
 
-        public categoriaRepositorio(IConfiguration configuration)
+        public CategoriaRepositorio(IConfiguration configuration)
         {
             _configuration = configuration;
         }
