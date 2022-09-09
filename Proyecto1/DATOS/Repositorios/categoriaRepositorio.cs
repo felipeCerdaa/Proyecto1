@@ -29,8 +29,17 @@ namespace Proyecto1.DATOS.Repositorios
 
             }
 
-
             return listaCategoria;
+        }
+
+        public void CrearCategoria(Categoria categoria) 
+        {
+            using SqlConnection sql = new SqlConnection(_configuration.GetConnectionString("conexionPorDefecto"));
+            using SqlCommand cmd = new SqlCommand("sp_insertar_categoria", sql);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
+            sql.Open();
+            cmd.ExecuteNonQuery();
         }
     }
 }

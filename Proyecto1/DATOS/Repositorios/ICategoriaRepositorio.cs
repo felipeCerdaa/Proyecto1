@@ -3,5 +3,6 @@
     public interface ICategoriaRepositorio
     {
         List<Categoria> ObtenerTodas();
+        void CrearCategoria(Categoria categoria)
     }
 }

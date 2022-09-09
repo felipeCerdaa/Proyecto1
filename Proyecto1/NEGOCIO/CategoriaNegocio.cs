@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.WebUtilities;
+using Proyecto1.DATOS;
 using Proyecto1.DATOS.Repositorios;
 using Proyecto1.DTO;
 
@@ -23,6 +24,12 @@ namespace Proyecto1.NEGOCIO
             }
 
             return listaCategoriasDTO;
+        }
+
+        public void CrearCategoria(CategoriaDTO categoriaDTO)
+        {
+            var categoria = new Categoria { Nombre = categoriaDTO.Nombre };
+            _categoriaRepositorio.CrearCategoria(categoria);
         }
     }
 }
