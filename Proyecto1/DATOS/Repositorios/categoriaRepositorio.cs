@@ -15,7 +15,8 @@ namespace Proyecto1.DATOS.Repositorios
         {
             var listaCategoria = new List<Categoria>();
             using SqlConnection sql = new SqlConnection(_configuration.GetConnectionString("conexionPorDefecto"));
-            using SqlCommand cmd = new SqlCommand("select * from Categorias", sql);
+            using SqlCommand cmd = new SqlCommand("sp_obtener_categorias", sql);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;        
             sql.Open();
             using (var reader = cmd.ExecuteReader())
             {
