@@ -11,8 +11,8 @@
 			<div class="card-body">
 				<div class="form-group">
 					<label>Nombre</label>
-					<input asp-for="Nombre" class="form-control"/>
-					<span asp-validation-for="Nombre">El Campo Nombre es requerido</span>
+					<input maxlength="50" asp-for="Nombre" class="form-control"/>
+					<span class="text-danger" asp-validation-for="Nombre"></span>
 				</div>
 			</div>
 			<div class="card-footer d-flex justify-content-between">

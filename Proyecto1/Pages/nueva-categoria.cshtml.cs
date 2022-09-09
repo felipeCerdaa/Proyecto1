@@ -15,7 +15,7 @@ namespace Proyecto1.Pages
             _categoriaNegocio = categoriaNegocio;
         }
         [BindProperty]
-        [Required]
+        [Required(ErrorMessage ="El campo NOMBRE es requerido")]
         public string Nombre { get; set; }  
         public void OnGet()
         {
