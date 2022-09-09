@@ -7,16 +7,17 @@
 		<div class="card-header bg-primary text-white">
 			<h3>Nueva Categoria</h3>
 		</div>
-		<form>
+		<form method="post">
 			<div class="card-body">
 				<div class="form-group">
 					<label>Nombre</label>
-					<input class="form-control"/>
+					<input asp-for="Nombre" class="form-control"/>
+					<span asp-validation-for="Nombre">El Campo Nombre es requerido</span>
 				</div>
 			</div>
 			<div class="card-footer d-flex justify-content-between">
-				<button class="btn btn-success">Guardar</button>
-				<button class="btn btn-secondary">Cancelar</button>
+				<button type="submit" class="btn btn-success">Guardar</button>
+				<a asp-page="/categorias" class="btn btn-secondary">Cancelar</a>
 			</div>
 		</form>
 

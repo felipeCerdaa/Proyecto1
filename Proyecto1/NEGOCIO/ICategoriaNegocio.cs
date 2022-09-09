@@ -5,5 +5,6 @@ namespace Proyecto1.NEGOCIO
     public interface ICategoriaNegocio
     {
         List<CategoriaDTO> ObtenerCategoria();
+        void CrearCategoria(CategoriaDTO categoriaDTO);
     }
 }

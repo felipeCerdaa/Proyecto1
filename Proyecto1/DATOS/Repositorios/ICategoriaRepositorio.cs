@@ -3,6 +3,7 @@
     public interface ICategoriaRepositorio
     {
         List<Categoria> ObtenerTodas();
-        void CrearCategoria(Categoria categoria)
+        void CrearCategoria(Categoria categoria);
+        
     }
 }
