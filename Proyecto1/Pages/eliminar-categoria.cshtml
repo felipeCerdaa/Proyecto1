@@ -1,25 +1,23 @@
 ﻿@page
-@model Proyecto1.Pages.nueva_categoriaModel
+@model Proyecto1.Pages.eliminar_categoriaModel
 @{
 }
 <div class="d-flex justify-content-center">
 	<div class="card col-6">
 		<div class="card-header bg-primary text-white">
-			<h3>Nueva Categoria</h3>
+			<h3>Eliminar Categoria</h3>
 		</div>
 		<form method="post">
 			<div class="card-body">
-				<div class="form-group">
-					<label>Nombre</label>
-					<input maxlength="50" asp-for="Nombre" class="form-control"/>
-					<span class="text-danger" asp-validation-for="Nombre"></span>
-				</div>
+				<p>¿Esta seguro de ELIMINAR la categoria?</p>
+
 			</div>
 			<div class="card-footer d-flex justify-content-between">
-				<button type="submit" class="btn btn-success">Guardar</button>
+				<button type="submit" class="btn btn-success">Eliminar</button>
 				<a asp-page="/categorias" class="btn btn-secondary">Cancelar</a>
 			</div>
 		</form>
+
 
 	</div>
 </div>

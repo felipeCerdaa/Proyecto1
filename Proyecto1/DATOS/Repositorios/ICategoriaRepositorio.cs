@@ -4,6 +4,7 @@
     {
         List<Categoria> ObtenerTodas();
         void CrearCategoria(Categoria categoria);
-        
-    }
+		Categoria ObtenerPorId(int id);
+		void ActualizarCategoria(Categoria categoria);
+	}
 }

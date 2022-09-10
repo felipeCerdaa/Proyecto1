@@ -6,5 +6,7 @@ namespace Proyecto1.NEGOCIO
     {
         List<CategoriaDTO> ObtenerCategoria();
         void CrearCategoria(CategoriaDTO categoriaDTO);
-    }
+        CategoriaDTO ObtenerCategoriaPorId(int id);
+		void ActualizarCategoria(CategoriaDTO categoriaDTO);
+	}
 }
