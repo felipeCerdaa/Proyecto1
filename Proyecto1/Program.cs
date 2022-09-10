@@ -9,7 +9,7 @@ builder.Services.AddScoped<Icalculo, Calculo2>();
 builder.Services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
 builder.Services.AddScoped<ICategoriaNegocio, CategoriaNegocio>();
 builder.Services.AddScoped<IPersonajeRepositorio, PersonajeRepositorio>();
-
+builder.Services.AddScoped<IPersonajeNegocio, PersonajeNegocio>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

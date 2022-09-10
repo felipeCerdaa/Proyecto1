@@ -22,7 +22,13 @@ namespace Proyecto1.DATOS.Repositorios
             {
                 while (reader.Read())
                 {
-                    var nuevaPersonaje = new Personaje { Id = (int)reader["Id"], Nombre = reader["Nombre"].ToString(), FechaNacimiento = (DateTime)reader["FechaNacimiento"], Categoria = reader["Categoria"].ToString() };
+                    var nuevaPersonaje = new Personaje
+                    {
+                        Id = (int)reader["Id"],
+                        Nombre = reader["Nombre"].ToString(),
+                        FechaNacimiento = reader["FechaNacimiento"] == DBNull.Value ? null : (DateTime)reader["FechaNacimiento"],
+                        Categoria = reader["Categoria"].ToString() 
+                    };
                     listaPersonajes.Add(nuevaPersonaje);
                 }
             }

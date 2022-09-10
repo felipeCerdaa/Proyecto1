@@ -5,7 +5,7 @@
 <div class="card">
 	<div class="card-header bg-primary text-white d-flex justify-content-between">
 		<h3>Listado de Personajes</h3>
-		<a asp-page="/nueva-personaje" class="btn btn-success"><i class="bi bi-person-plus-fill"></i> Nueva Personaje</a>
+		<a asp-page="/nuevo-personaje" class="btn btn-success"><i class="bi bi-person-plus-fill"></i> Nuevo Personaje</a>
 	</div>
 	<div class="card-body">
 		<table class="table table-striped">
@@ -19,48 +19,19 @@
 				</tr>
 			</thead>
 			<tbody>
-
-				<tr>
-					<td>1</td>
-					<td>Personaje 1</td>
-					<td>01/01/1900</td>
-					<td>Categoria 1</td>
+				@foreach(var personaje in Model.Personajes)
+				{
+					<tr>
+					<td>@personaje.Id</td>
+					<td>@personaje.Nombre
+					<td>@personaje.FechaNacimiento</td>
+					<td>@personaje.Categoria</td>
 					<td>
 						<a asp-page="/editar-categoria" class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
 						<a asp-page="/eliminar-categoria" class=" btn btn-danger"><i class="bi bi-trash"></i> Borrar</a>
 					</td>
 				</tr>
-				<tr>
-					<td>2</td>
-					<td>Personaje 2</td>
-					<td>01/01/1900</td>
-					<td>Categoria 2</td>
-					<td>
-						<a asp-page="/editar-categoria" class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
-						<a asp-page="/eliminar-categoria" class=" btn btn-danger"><i class="bi bi-trash"></i> Borrar</a>
-					</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Personaje 3</td>
-					<td>01/01/1900</td>
-					<td>Categoria 3</td>
-					<td>
-						<a asp-page="/editar-categoria" class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
-						<a asp-page="/eliminar-categoria" class=" btn btn-danger"><i class="bi bi-trash"></i> Borrar</a>
-					</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>Personaje 4</td>
-					<td>01/01/1900</td>
-					<td>Categoria 4</td>
-					<td>
-						<a asp-page="/editar-categoria" class="btn btn-warning"><i class="bi bi-pencil"></i> Editar</a>
-						<a asp-page="/eliminar-categoria" class=" btn btn-danger"><i class="bi bi-trash"></i> Borrar</a>
-					</td>
-				</tr>
-
+				}
 
 			</tbody>
 		</table>
