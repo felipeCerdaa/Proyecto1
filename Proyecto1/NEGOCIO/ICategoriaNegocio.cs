@@ -8,5 +8,6 @@ namespace Proyecto1.NEGOCIO
         void CrearCategoria(CategoriaDTO categoriaDTO);
         CategoriaDTO ObtenerCategoriaPorId(int id);
 		void ActualizarCategoria(CategoriaDTO categoriaDTO);
+		void EliminarCategoria(int id);
 	}
 }

@@ -44,5 +44,10 @@ namespace Proyecto1.NEGOCIO
             var categoria = new Categoria {Id= categoriaDTO.Id, Nombre = categoriaDTO.Nombre };
             _categoriaRepositorio.ActualizarCategoria(categoria);
         }
+
+        public void EliminarCategoria(int id)
+        {
+            _categoriaRepositorio.EliminarCategoria(id);
+        }
     }
 }
