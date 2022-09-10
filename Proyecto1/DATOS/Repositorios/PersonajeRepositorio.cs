@@ -94,5 +94,15 @@ namespace Proyecto1.DATOS.Repositorios
             sql.Open();
             cmd.ExecuteNonQuery();
         }
+
+        public void EliminarPersonaje(int id)
+        {
+            using SqlConnection sql = new SqlConnection(_configuration.GetConnectionString("conexionPorDefecto"));
+            using SqlCommand cmd = new SqlCommand("sp_eliminar_personaje", sql);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@id", id));
+            sql.Open();
+            cmd.ExecuteNonQuery();
+        }
     }
 }

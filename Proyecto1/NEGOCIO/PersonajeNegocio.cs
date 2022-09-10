@@ -86,5 +86,10 @@ namespace Proyecto1.NEGOCIO
             };
             _personajeRepositorio.ActualizarPersonaje(personaje);
         }
+
+		public void EliminarPersonaje(int id)
+		{
+			_personajeRepositorio.EliminarPersonaje(id);
+		}
     }
 }
