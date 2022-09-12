@@ -27,7 +27,9 @@ namespace Proyecto1.DATOS.Repositorios
                         Id = (int)reader["Id"],
                         Nombre = reader["Nombre"].ToString(),
                         FechaNacimiento = reader["FechaNacimiento"] == DBNull.Value ? null : (DateTime)reader["FechaNacimiento"],
-                        Categoria = reader["Categoria"].ToString() 
+                        Categoria = reader["Categoria"].ToString(),
+                        ImagenUrl = reader["ImagenUrl"].ToString(),
+                        NombreReal = reader["NombreReal"].ToString()
                     };
                     listaPersonajes.Add(nuevaPersonaje);
                 }
